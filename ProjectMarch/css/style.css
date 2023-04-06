@@ -136,6 +136,10 @@ h2 {
     background-color: #DFB3CE;
 }
 
+.btn-mobile-nav {
+    display: none;
+}
+
 .container {
 
     max-width: 120rem;
@@ -518,4 +522,57 @@ h1 {
 .testimonial-name {
     font-size: 1.6rem;
     color: #6f6f6f;
+}
+
+/************FOOTER***************/
+.grid-4-colls {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-heading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.75px;
+}
+
+.logo-list {
+    /* display: flex;*/
+    list-style: none;
+    margin: 1.8rem;
+    font-size: 1.4rem;
+}
+
+.logo-list li {
+    margin-left: 1rem;
+    margin-bottom: 1.8rem;
+
+}
+
+.copyright {
+    margin-bottom: 1.8rem;
+    font-size: 1.4rem;
+}
+
+.footer-list {
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+.footer-list li {
+    margin-bottom: 1.8rem;
+}
+
+.footer-list a:link,
+footer-list a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+footer-list a:hover,
+footer-list a:active {
+    color: black;
 }

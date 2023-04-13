@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .egg {
+                width: 136px;
+                height: 190px;
+                background: yellow;
+                display: block;
+                border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            }
+
+            .egg2 {
+                width: 136px;
+                height: 190px;
+                background: red;
+                display: block;
+                border-radius: 50% 50% 50% 50%/ 60% 60% 40% 40%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="egg" id="egg"></div>
+
+        <div class="egg2" id="egg2"></div>
+        <script>
+
+            //second egg
+            var col2 = document.getElementById("egg2");
+            var br = 0;
+            var currentWidth = 136;
+            var currentHeight = 190;
+            var id2 = setInterval(frame2, 100);
+            function frame2() {
+                if (br == 100) {
+                    clearInterval(id2);
+                }
+                else {
+                    col2.style.width = currentWidth + br + "px";
+                    col2.style.height = currentHeight + br + "px";
+                }
+                br++;
+            }
+
+            //first egg
+            var col = document.getElementById("egg");
+            var count = 0;
+            col.style.background = "yellow";
+            var id = setInterval(frame, 500);
+
+            function frame() {
+                if (count == 100) {
+                    clearInterval(id);
+                    col.style.background = "blue";
+                } else {
+                    if (col.style.background == "yellow") {
+                        col.style.background = "red";
+                    }
+                    else if (col.style.background == "red") {
+                        col.style.background = "green";
+                    }
+                    else if (col.style.background == "green") {
+                        col.style.background = "yellow";
+                    }
+                    count++;
+
+                }
+            }
+        </script>
+    </body>
+
+</html>

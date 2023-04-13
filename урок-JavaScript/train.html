@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            #train {
+                position: relative;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+
+        <img id="train" src="https://js.cx/clipart/train.gif">
+        <script>
+            let start = Date.now();
+
+            let timer = setInterval(function () {
+                let timePassed = Date.now() - start;
+
+                if (timePassed >= 2000) {
+
+                    clearInterval(timer);
+
+                    return;
+
+                }
+                draw(timePassed);
+
+            }, 20);
+
+            function draw(timePassed) {
+
+                train.style.left = timePassed / 5 + 'px';
+
+            }
+
+            var fruits = [1, 2, 3, 4, 5, 6];
+            for (var i = 0; i < 100; i += 2) {
+                // window.alert(i);
+            }
+
+            var counter = 0;
+            while (counter < 10) {
+                counter++;
+                window.alert(counter);
+            }
+            ///counter e 10;
+            do {
+                window.alert(counter);
+            } while (counter < 10)
+        </script>​
+    </body>
+
+</html>

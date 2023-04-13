@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <style>
+            span {
+                width: 50px;
+                height: 10px;
+                position: absolute;
+                color: hotpink;
+
+            }
+
+            button {
+                margin: 200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+        <div id="rosi"><span>R</span><span style="left:20px">o</span><span style="left:30px">s</span><span
+                style="left:40px">i</span></div>
+        </p>
+        <p>
+            <button onclick="animateName()">Test Me</button>
+        </p>
+        <script>
+            function myMove(elem, i) {
+                var pos = i * 50;//за разстояние между буквите
+                var fontSize = (i + 1) * 12;//първия индекс е 0, слагаме 1, за да не направи фонта 0 и да почне от там,растат с 12px
+                var id = null;
+                clearInterval(id);
+                id = setInterval(frame, 10);
+                function frame() {
+                    if (pos == 350 + (i * 50)) //да спрат на разстояние 50 една от друга
+                    {
+                        elem.style.top = 450 + 'px';
+                        elem.style.fontSize = 50 + 'px';
+                        clearInterval(id);
+                    } else {
+                        pos++;
+                        fontSize++;
+                        elem.style.top = pos + 'px';
+                        elem.style.left = pos + 'px';
+                        elem.style.fontSize = fontSize + 'px';
+                    }
+                }
+            }
+
+            function animateName() {
+
+                var elemes = document.getElementsByTagName('span');;
+
+                for (let i = 0; i < elemes.length; i++) {
+                    myMove(elemes[i], i);
+                }
+            }
+
+        </script>
+    </body>
+
+</html>
